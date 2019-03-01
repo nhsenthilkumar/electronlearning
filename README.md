@@ -31,3 +31,27 @@ npm run start
 ```
 
 You should able to see the message in the console window.
+
+## Step 3 install electron
+
+Run the following script
+
+```
+npm install electron --save-dev
+```
+
+Change the script configuration to use electron instead of node as shown below
+
+```
+"scripts": {
+    "start": "electron main.js"
+  }
+```
+
+Test the script configuration using the following command
+
+```
+npm run start
+```
+
+You should able to see the message in the console window.
