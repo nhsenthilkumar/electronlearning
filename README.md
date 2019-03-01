@@ -69,3 +69,51 @@ app.on('ready', () => {
 ```
 
 Test the application is still works. https://electronjs.org/docs/api/app
+
+### Step 5 Create UI and launch it
+
+create sample.html file with following content
+
+```
+<html>
+  <body>
+    <h1>First Electron application using basic HTML</h1>
+  </body>
+</html>
+
+```
+
+In main.js
+include BrowserWindow from electron and path as given below
+
+```
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+```
+
+Write a method to create a window and load the above created HTML as given below
+
+```
+let mainWindow;
+
+function createWindow() {
+  mainWindow = new BrowserWindow({
+    width: '500px',
+    height: '500px',
+    title: 'Main Window'
+  });
+
+  mainWindow.loadFile(path.join(__dirname, 'sample.html'));
+
+  mainWindow.show();
+}
+```
+
+on application ready lets create the window instead of console log and test the application
+
+```
+app.on('ready', () => {
+  createWindow();
+});
+
+```
