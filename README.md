@@ -55,3 +55,17 @@ npm run start
 ```
 
 You should able to see the message in the console window.
+
+## Step 4 Create electron application
+
+Change the main.js content as given below
+
+```
+const { app } = require('electron');
+
+app.on('ready', () => {
+  console.log('Electron application started');
+});
+```
+
+Test the application is still works. https://electronjs.org/docs/api/app

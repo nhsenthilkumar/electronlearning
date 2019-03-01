@@ -1,1 +1,5 @@
-console.log('NPM script run properly.');
+const { app } = require('electron');
+
+app.on('ready', () => {
+  console.log('Electron application started');
+});
